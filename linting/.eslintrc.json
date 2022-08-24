@@ -1,0 +1,117 @@
+{
+    "env": {
+        "browser": true,
+        "commonjs": true,
+        "es2021": true
+    },
+    "extends": [
+        "eslint:recommended",
+        "plugin:@typescript-eslint/recommended"
+    ],
+    "overrides": [
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaVersion": "latest"
+    },
+    "plugins": [
+        "@typescript-eslint"
+    ],
+    "rules": {
+         ////////// Possible Errors //////////
+        "no-comma-dangle": 0, // không cho phép dấu phẩy ở cuối trong các ký tự đối tượng
+        "no-cond-assign": 0, // không cho phép gán trong biểu thức điều kiện
+        "no-console": 0, // không cho phép sử dụng console (tắt theo mặc định trong môi trường nút)
+        "no-Constant-condition": 0, // không cho phép sử dụng các biểu thức hằng trong các điều kiện
+        "no-control-regex": 0, // không cho phép các ký tự điều khiển trong biểu thức chính quy
+        "no-debugger": 0, // không cho phép sử dụng trình gỡ lỗi
+        "no-dupe-key": 0, // không cho phép các khóa trùng lặp khi tạo các ký tự đối tượng
+        "no-blank": 0, // không cho phép các câu lệnh trống
+        "no-blank-class": 0, // không cho phép sử dụng các lớp ký tự trống trong biểu thức chính quy
+        "no-ex-assign": 0, // không cho phép gán cho ngoại lệ trong một khối bắt
+        "no-extra-boolean-cast": 0, // không cho phép các phôi boolean phủ định kép trong ngữ cảnh boolean
+        "no-extra-parens": 0, // không cho phép các dấu ngoặc đơn không cần thiết (tắt theo mặc định)
+        "no-extra-semi": 0, // không cho phép các dấu chấm phẩy không cần thiết
+        "no-func-gán": 0, // không cho phép ghi đè các hàm được viết dưới dạng khai báo hàm
+        "no-inner-statement": 0, // không cho phép khai báo hàm hoặc biến trong các khối lồng nhau
+        "no-valid-regexp": 0, // không cho phép các chuỗi biểu thức chính quy không hợp lệ trong hàm tạo RegExp
+        "không có khoảng trắng bất thường": 0, // không cho phép khoảng trắng bất thường bên ngoài chuỗi và nhận xét
+        "no-negated-in-lhs": 0, // không cho phép phủ định toán hạng bên trái của một biểu thức trong
+        "no-obj-call": 0, // không cho phép sử dụng thuộc tính đối tượng của đối tượng toàn cục (Math và JSON) làm hàm
+        "no-regex-space": 0, // không cho phép nhiều khoảng trắng trong một ký tự biểu thức chính quy
+        "no-Reserve-key": 0, // không cho phép các từ dành riêng được sử dụng làm khóa chữ của đối tượng (tắt theo mặc định)
+        "no-vertical-array": 0, // không cho phép các mảng thưa thớt
+        "no-không thể truy cập": 0, // không cho phép các câu lệnh không thể truy cập sau một câu lệnh return, ném, tiếp tục hoặc ngắt
+        "use-isnan": 0, // không cho phép so sánh với giá trị NaN
+        "valid-jsdoc": 0, // Đảm bảo nhận xét JSDoc hợp lệ (tắt theo mặc định)
+        "valid-typeof": 0, // Đảm bảo rằng kết quả của typeof được so sánh với một chuỗi hợp lệ
+
+
+        ////////// Best Practices //////////
+        "block-scoped-var": 0, // xử lý các câu lệnh var như thể chúng là phạm vi khối (tắt theo mặc định)
+        "complex": 0, // chỉ định độ phức tạp theo chu kỳ tối đa được phép trong một chương trình (tắt theo mặc định)
+        "align-return": 0, // yêu cầu các câu lệnh trả về luôn luôn hoặc không bao giờ chỉ định giá trị
+        "curl": 0, // chỉ định các quy ước về dấu ngoặc nhọn cho tất cả các câu lệnh điều khiển
+        "default-case": 0, // yêu cầu viết hoa mặc định trong câu lệnh switch (tắt theo mặc định)
+        "dot-notation": 0, // khuyến khích sử dụng ký hiệu dấu chấm bất cứ khi nào có thể
+        "eqeqeq": 0, // yêu cầu sử dụng === và! ==
+        "Guard-for-in": 0, // đảm bảo các vòng lặp for-in có câu lệnh if (tắt theo mặc định)
+        "no-alert": 0, // không cho phép sử dụng cảnh báo, xác nhận và lời nhắc
+        "no-caller": 0, // không cho phép sử dụng đối số.caller hoặc đối số.callee
+        "no-div-regex": 0, // không cho phép các toán tử chia rõ ràng ở đầu biểu thức chính quy (tắt theo mặc định)
+        "no-else-return": 0, // không cho phép khác sau khi trả về trong if (tắt theo mặc định)
+        "no-blank-label": 0, // không cho phép sử dụng nhãn cho bất kỳ thứ gì khác, sau đó lặp lại và chuyển đổi
+        "no-eq-null": 0, // không cho phép so sánh thành null mà không có toán tử kiểm tra kiểu (tắt theo mặc định)
+        "no-eval": 0, // không cho phép sử dụng eval ()
+        "no-extension-native": 0, // không cho phép thêm vào các loại gốc
+        "no-extra-bind": 0, // không cho phép ràng buộc hàm không cần thiết
+        "no-fallthrough": 0, // không cho phép dự đoán các câu lệnh viết hoa
+        "no-float-decimal": 0, // không cho phép sử dụng dấu thập phân ở đầu hoặc cuối trong các ký tự số (tắt theo mặc định)
+        "no-implied-eval": 0, // không cho phép sử dụng các phương thức giống eval ()
+        "no-iterator": 0, // không cho phép sử dụng thuộc tính __iterator__
+        "no-label": 0, // không cho phép sử dụng các câu lệnh có nhãn
+        "no-alone-blocks": 0, // không cho phép các khối lồng nhau không cần thiết
+        "no-loop-func": 0, // không cho phép tạo các hàm trong vòng lặp
+        "no-multi-space": 0, // không cho phép sử dụng nhiều khoảng trắng
+        "no-multi-str": 0, // không cho phép sử dụng chuỗi nhiều dòng
+        "no-native-reassign": 0, // không cho phép gán lại các đối tượng gốc
+        "no-new": 0, // không cho phép sử dụng toán tử mới khi không phải là một phần của phép gán hoặc so sánh
+        "no-new-func": 0, // không cho phép sử dụng toán tử mới cho đối tượng Hàm
+        "no-new-wrappers": 0, // không cho phép tạo các bản sao mới của Chuỗi, Số và Boolean
+        "no-octal": 0, // không cho phép sử dụng các ký tự bát phân
+        "no-octal-Escape": 0, // không cho phép sử dụng chuỗi thoát bát phân trong chuỗi ký tự, chẳng hạn như var foo = "Copyright \ 251";
+        "no-process-env": 0, // không cho phép sử dụng process.env (tắt theo mặc định)
+        "no-proto": 0, // không cho phép sử dụng thuộc tính __proto__
+        "no-redeclare": 0, // không cho phép khai báo cùng một biến sau đó một lần
+        "no-return-assign": 0, // không cho phép sử dụng phép gán trong câu lệnh return
+        "no-script-url": 0, // không cho phép sử dụng javascript: url.
+        "no-self-so sánh": 0, // không cho phép so sánh trong đó cả hai bên hoàn toàn giống nhau (tắt theo mặc định)
+        "no-sequences": 0, // không cho phép sử dụng toán tử dấu phẩy
+        "no-used-expression": 0, // không cho phép sử dụng các biểu thức trong vị trí câu lệnh
+        "no-void": 0, // không cho phép sử dụng toán tử void (tắt theo mặc định)
+        "no-warning-comments": 0, // không cho phép sử dụng các thuật ngữ cảnh báo có thể định cấu hình trong các nhận xét, ví dụ: TODO hoặc FIXME (tắt theo mặc định)
+        "no-with": 0, // không cho phép sử dụng câu lệnh with
+        "radix": 0, // yêu cầu sử dụng đối số thứ hai cho parseInt () (tắt theo mặc định)
+        "vars-on-top": 0, // yêu cầu khai báo tất cả các vars trên phạm vi chứa của chúng (tắt theo mặc định)
+        "wrap-iife": 0, // yêu cầu lệnh gọi hàm ngay lập tức được đặt trong dấu ngoặc đơn (tắt theo mặc định)
+        "yoda": 0, // yêu cầu hoặc không cho phép điều kiện Yoda
+
+
+        ////////// Variables //////////
+        "no-catch-shadow": 0, // không cho phép tên tham số mệnh đề bắt giống với một biến trong phạm vi bên ngoài (tắt theo mặc định trong môi trường nút)
+        "no-delete-var": 0, // không cho phép xóa các biến
+        "no-label-var": 0, // không cho phép các nhãn dùng chung tên với một biến
+        "no-shadow": 0, // không cho phép khai báo các biến đã được khai báo trong phạm vi bên ngoài
+        "no-shadow-limited-names": 0, // không cho phép ẩn các tên chẳng hạn như đối số
+        "no-undef": 0, // không cho phép sử dụng các biến chưa được khai báo trừ khi được đề cập trong khối / * global * /
+        "no-undef-init": 0, // không cho phép sử dụng undefined khi khởi tạo biến
+        "no-undefined": 0, // không cho phép sử dụng biến không xác định (tắt theo mặc định)
+        "no-used-vars": 0, // không cho phép khai báo các biến không được sử dụng trong mã
+        "no-use-before-define": 0, // không cho phép sử dụng các biến trước khi chúng được xác định
+
+        
+        ////////// ECMAScript 6 //////////
+        "no-var": 0, // yêu cầu let hoặc const thay vì var (tắt theo mặc định)
+        "launcher-star": 0, // thực thi vị trí của * trong các hàm của trình tạo (tắt theo mặc định)
+    }
+}
